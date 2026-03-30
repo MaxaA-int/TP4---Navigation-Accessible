@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /**
- * @author Prénom Nom courriel
+ * @author Maxime Riverin <2435415@csfoy.ca>
  *
  * TABLE DES MATIÈRES
  * Normalize
@@ -157,10 +157,19 @@ figcaption {
 }
 
 /* Menu principal */
-.logo {}
+.logo {
+    float: left;
+    width: 150px;
+}
+
+.nav {
+    text-align: right;
+}
 
 @media (min-width: 48rem) {
-    .logo {}
+    .logo {
+        width: 180px;
+    }
 }
 
 

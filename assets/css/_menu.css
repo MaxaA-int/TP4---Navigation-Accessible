@@ -1,5 +1,5 @@
 /**
- * @author Prénom Nom courriel
+ * @author Maxime Riverin 2435415@csfoy.ca
 **/
 
 /**
@@ -14,9 +14,16 @@
 
 /****** Base commune *******/
 
+/* Palette de couleur */
+:root {
+    --couleur-jaune: #dba70d;
+    --couleur-gris-transparent: rgba(255, 255, 255, 0.25);
+}
+
 /* Bouton du menu */
 .nav__control {
-    background-color: rgba(145, 0, 145, 0.2);
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
     border: none;
     padding: 10px;
     min-width: 40px;
@@ -31,23 +38,12 @@
 .nav__control:hover,
 .nav__control:active {
     color: #fff;
-    background-color: darkmagenta;
+    background-color: var(--couleur-gris-transparent);
 }
 
 .nav__control:focus {
-    /* En mettant la règle outline: none;, les styles du navigateur
-     * pour les éléments en cours de focus sont effacés. Il faut alors
-     * les remplacer par d'autres styles qui peuvent être plus
-     * en accord avec la direction visuelle du projet.
-     */
-    outline: none;
-    /* AUTRES STYLES EN REMPLACEMENT DU OUTLINE */
-    /*
-     * Les règles outline-offset et outline permettent
-     * de modifier l'apparence du outline par défaut des navigateurs.
-     */
     outline-offset: -5px;
-    outline: darkmagenta auto 5px;
+    outline: var(--couleur-jaune) auto 5px;
 }
 
 
@@ -56,11 +52,13 @@
     content: "";
     width: 1em;
     height: 1em;
-    /* compléter pour afficher l’icône X */
+    margin-right: 0.5em;
+    background-image: url(../images/ico-fermer.svg);
+    background-size: auto 1em;
 }
 
 .nav--closed .nav__control:before {
-    /* compléter pour afficher l’icône Hamburger */
+    background-image: url(../images/ico-menu.svg);
 }
 
 /* Liste du menu */
@@ -79,10 +77,11 @@
 
 /* Liens du menu */
 .nav__link {
-    background-color: rgba(145, 0, 145, 0.2);
     display: block;
     padding: 5px 10px;
     width: 100%;
+    text-align: left;
+    outline: none;
 }
 
 .nav__link:link,
@@ -93,34 +92,40 @@
 
 .nav__link:hover {
     color: #fff;
-    background-color: darkmagenta;
+    color: var(--couleur-jaune);
 }
 
 .nav__link:active {
     color: #fff;
-    background-color: magenta;
+    background-color: var(--couleur-jaune);
 }
 
 
 .nav__link:focus {
-    outline-offset: -5px;
-    outline: darkmagenta auto 5px;
+    border-left: var(--couleur-jaune) solid 3px;
+}
+
+@media (min-width: 40rem) {
+    .nav__link:focus {
+        border: none;
+        border-bottom: var(--couleur-jaune) solid 3px;
+    }
 }
 
 /** Une classe nav__link--active
     sert à définir un état différent
     pour l'item de menu actif
     **/
-.nav__link--active {
-    border-left: 5px solid rgba(101, 68, 180, 1);
+/* .nav__link--active {
+    border-left: 5px solid var(--couleur-jaune);
 }
 
 @media (min-width: 40rem) {
     .nav__link--active {
         border-left: none;
-        border-bottom: 5px solid rgba(101, 68, 180, 1);
+        border-left: 5px solid var(--couleur-jaune);
     }
-}
+} */
 
 
 /* L'ajout par JavaScript de la classe .js

@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <title>Kampadejo - Expériences de camping</title>
     <link rel="stylesheet" href="assets/css/style.css">
@@ -11,10 +12,29 @@
 </head>
 
 <body>
-    <!-- Lien Aller au contenu -->
+    <a href="#contenu" class="sauter screen-reader-only focusable">
+        Allez au contenu </a>
     <header class="entete">
         <div class="conteneur">
-            <!-- Menu principal -->
+            <nav class="nav nav--closed">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo.svg" alt="Logo Accueil Kampadejo">
+                </a>
+                <ul class="nav__list">
+                    <li class="nav__list-item">
+                        <a href="#entreprise" class="nav__link">Entreprise</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a href="#experiences" class="nav__link">Experiences</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a href="#services" class="nav__link">Services</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a href="#contact" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
 
 
         </div>
@@ -179,8 +199,7 @@
         <p class="copyright">&copy; Kampadejo - 2021 Tous droits réservés</p>
     </footer>
     
-    <!-- Script pour le menu mobile -->
-    
+    <script src="assets/js/menu.js" defer></script>
     
 </body>
 
