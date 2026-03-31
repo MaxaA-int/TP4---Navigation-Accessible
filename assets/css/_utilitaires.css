@@ -3,11 +3,10 @@
 
 /****** Variables (peuvent être utilisées dans tous les fichiers) *******/
 :root {
-    /** Variables À DÉFINIR 
-        JAUNE: #dba70d
-        GRIS TRANSPARENT: rgba(255, 255, 255, 0.25)
-        Valeur de border-radius des éléments :
-    */
+    --couleur-jaune: #dba70d;
+    --couleur-gris-transparent: rgba(255, 255, 255, 0.25);
+    --couleur-blanc: #fff;
+    --border-radius-5px: 5px;
 }
 
 /*** Clearfix ***/

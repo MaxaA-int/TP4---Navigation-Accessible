@@ -14,16 +14,10 @@
 
 /****** Base commune *******/
 
-/* Palette de couleur */
-:root {
-    --couleur-jaune: #dba70d;
-    --couleur-gris-transparent: rgba(255, 255, 255, 0.25);
-}
-
 /* Bouton du menu */
 .nav__control {
     background-color: rgba(255, 255, 255, 0);
-    color: white;
+    color: var(--couleur-blanc);
     border: none;
     padding: 10px;
     min-width: 40px;
@@ -37,7 +31,7 @@
 
 .nav__control:hover,
 .nav__control:active {
-    color: #fff;
+    color: var(--couleur-blanc);
     background-color: var(--couleur-gris-transparent);
 }
 
@@ -91,12 +85,12 @@
 }
 
 .nav__link:hover {
-    color: #fff;
+    color: var(--couleur-blanc);
     color: var(--couleur-jaune);
 }
 
 .nav__link:active {
-    color: #fff;
+    color: var(--couleur-blanc);
     background-color: var(--couleur-jaune);
 }
 
