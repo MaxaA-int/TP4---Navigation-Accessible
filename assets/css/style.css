@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /**
- * @author Prénom Nom courriel
+ * @author Maxime Riverin <2435415@csfoy.ca>
  *
  * TABLE DES MATIÈRES
  * Normalize
@@ -45,14 +45,14 @@
 /* Règles générales */
 
 * {
-    outline-color: #dba70d;
+    outline-color: var(--couleur-jaune);
 }
 
 .sauter {
     outline: none;
     background-color: #222222;
-    border-bottom: 3px solid #dba70d;
-    color: #ffffff;
+    border-bottom: 3px solid var(--couleur-jaune);
+    color: var(--couleur-blanc);
     display: block;
     padding: 0.25em 0;
     text-align: center;
@@ -74,25 +74,25 @@ a {
 }
 
 .btn {
-    border: 3px solid rgba(255, 255, 255, 0.25);
-    border-radius: 5px;
+    border: 3px solid var(--couleur-gris-transparent);
+    border-radius: var(--border-radius-5px);
     display: inline-block;
     font-weight: bold;
-    color: #ffffff;
+    color: var(--couleur-blanc);
     padding: 0.5em 1em;
     text-decoration: none;
     transition: background-color 0.5s;
 }
 
 .btn:hover {
-    background-color: #dba70d;
-    border-color: #dba70d;
+    background-color: var(--couleur-jaune);
+    border-color: var(--couleur-jaune);
     color: #000;
 }
 
 .btn:focus {
     outline: 0;
-    border-color: #dba70d;
+    border-color: var(--couleur-jaune);
 }
 
 .icone {
@@ -128,7 +128,7 @@ figure img {
 }
 
 figcaption {
-    border-bottom: 5px solid #dba70d;
+    border-bottom: 5px solid var(--couleur-jaune);
     font-size: 1.25rem;
     margin-top: 10px;
     padding-bottom: 10px;
@@ -157,13 +157,20 @@ figcaption {
 }
 
 /* Menu principal */
-.logo {}
-
-@media (min-width: 48rem) {
-    .logo {}
+.logo {
+    float: left;
+    width: 150px;
 }
 
+.nav {
+    text-align: right;
+}
 
+@media (min-width: 48rem) {
+    .logo {
+        width: 180px;
+    }
+}
 
 
 /* Accroche */
@@ -214,7 +221,7 @@ figcaption {
 }
 
 .entreprise h2:after {
-    background-color: #dba70d;
+    background-color: var(--couleur-jaune);
     content: "";
     display: inline-block;
     width: 100px;
@@ -233,12 +240,12 @@ figcaption {
 }
 
 .experiences article {
-    background-color: #ffffff;
-    border-radius: 5px;
+    background-color: var(--couleur-blanc);
+    border-radius: var(--border-radius-5px);
 }
 
 .experiences article img {
-    border-radius: 5px 5px 0 0;
+    border-radius: var(--border-radius-5px) var(--border-radius-5px) 0 0;
     display: block;
     width: 100%;
     height: auto;
@@ -257,7 +264,7 @@ figcaption {
 }
 
 .experiences article h3:after {
-    background-color: #dba70d;
+    background-color: var(--couleur-jaune);
     content: "";
     display: inline-block;
     width: 30%;
@@ -274,11 +281,11 @@ figcaption {
 }
 
 .service {
-    border-top: 5px solid #dba70d;
+    border-top: 5px solid var(--couleur-jaune);
 }
 
 .service:last-of-type {
-    border-bottom: 5px solid #dba70d;
+    border-bottom: 5px solid var(--couleur-jaune);
 }
 
 .service h3 {
@@ -338,7 +345,7 @@ footer .h2 {
 }
 
 .informations a {
-    border-bottom: 2px solid #dba70d;
+    border-bottom: 2px solid var(--couleur-jaune);
     color: #000000;
     font-weight: bold;
     text-decoration: none;
@@ -363,7 +370,7 @@ footer .h2 {
 
 .copyright {
     text-align: center;
-    background-color: #ffffff;
+    background-color: var(--couleur-blanc);
     margin: 0;
     padding: 16px 0;
 }
