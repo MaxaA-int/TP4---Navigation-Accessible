@@ -158,7 +158,7 @@ figcaption {
 
 /* Menu principal */
 .logo {
-    float: left;
+    display: block;
     width: 150px;
 }
 
@@ -169,7 +169,13 @@ figcaption {
 @media (min-width: 48rem) {
     .logo {
         width: 180px;
+        display: inline;
+        float: left;
     }
+}
+
+.float-left {
+    float: left;
 }
 
 

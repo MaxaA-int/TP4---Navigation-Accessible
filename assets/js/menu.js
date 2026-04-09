@@ -15,6 +15,7 @@ let menu = {
     tagSpan: null,
     tagNav: document.querySelector('.nav'),
     relacherFocus: null,
+    tagLogo: document.getElementById('logo'),
 
     /**
      * Confine la navigation clavier à l'intérieur d'un élément.
@@ -92,6 +93,9 @@ let menu = {
 
         // Fermeture du la navigation par default
         this.tagNav.classList.add('nav--closed');
+
+        // Forcer le logo à gauche avevc le JS
+        this.tagLogo.classList.add('float-left');
 
         // Fermeture au clavier via Échap
         document.addEventListener('keydown', function (e) {

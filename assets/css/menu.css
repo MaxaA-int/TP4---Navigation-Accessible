@@ -23,7 +23,7 @@
     min-width: 40px;
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 48rem) {
     .nav__control {
         display: none;
     }
@@ -63,7 +63,7 @@
     max-height: none;
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 48rem) {
     .nav__list-item {
         display: inline-block;
     }
@@ -99,7 +99,7 @@
     border-left: var(--couleur-jaune) solid 3px;
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 48rem) {
     .nav__link:focus-visible {
         border: none;
         border-bottom: var(--couleur-jaune) solid 3px;
@@ -128,7 +128,7 @@
  *** en l'absence de JavaScript le menu restera visible et accessible
  *** en présence de JavaScript le menu est caché
  */
-@media (max-width: 39.9375rem) {
+@media (max-width: 48rem) {
     .js .nav__list {
         max-height: 100vh;
         overflow: hidden;
