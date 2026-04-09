@@ -35,7 +35,7 @@
     background-color: var(--couleur-gris-transparent);
 }
 
-.nav__control:focus {
+.nav__control:focus-visible {
     outline-offset: -5px;
     outline: var(--couleur-jaune) auto 5px;
 }
@@ -95,12 +95,12 @@
 }
 
 
-.nav__link:focus {
+.nav__link:focus-visible {
     border-left: var(--couleur-jaune) solid 3px;
 }
 
 @media (min-width: 40rem) {
-    .nav__link:focus {
+    .nav__link:focus-visible {
         border: none;
         border-bottom: var(--couleur-jaune) solid 3px;
     }
